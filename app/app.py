@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import numpy as np
+import os
+
 
 model = joblib.load('../models/random_forest_model.pkl')
 scaler = joblib.load('../models/scaler.pkl')  # Save your scaler separately if needed
@@ -20,3 +22,8 @@ if st.button("Check Fraud"):
     prediction = model.predict(input_data)
     result = "🚨 Fraud" if prediction[0] == 1 else "✅ Not Fraud"
     st.subheader(f"Prediction: {result}")
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))  # Required for Render
+    app.run(host='0.0.0.0', port=port)
