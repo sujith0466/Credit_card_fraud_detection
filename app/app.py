@@ -4,8 +4,11 @@ import numpy as np
 import os
 
 
-model = joblib.load('../models/random_forest_model.pkl')
-scaler = joblib.load('../models/scaler.pkl')  # Save your scaler separately if needed
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'random_forest_model.pkl')
+SCALER_PATH = os.path.join(BASE_DIR, 'models', 'scaler.pkl')
+model = joblib.load(MODEL_PATH)
+scaler = joblib.load(SCALER_PATH) # Save your scaler separately if needed
 
 st.title("💳 Credit Card Fraud Detection")
 
