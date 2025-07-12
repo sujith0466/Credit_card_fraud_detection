@@ -50,4 +50,31 @@ credit-card-fraud-detection/
 ```bash
 git clone https://github.com/your-username/credit-card-fraud-detection.git
 cd credit-card-fraud-detection
+2. Create a Virtual Environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. Install Dependencies
+pip install -r requirements.txt
+
+
+4. Run the App
+For Streamlit:
+streamlit run app/app.py
+
+For Flask:
+python app/app.py
+
+📌 Key ML Concepts Used
+Class Imbalance Handling (SMOTE)
+Logistic Regression, Random Forest, XGBoost
+Cross-validation
+ROC-AUC and confusion matrix analysis
+
+🖼️ Screenshots
+Input Form (Streamlit/Flask)	Prediction Result
+
+👨‍💻 Author
+Sujith Kumar
+B.Tech – Artificial Intelligence & Data Science
 
